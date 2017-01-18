@@ -28,7 +28,13 @@ class User extends Authenticatable
     ];
 
     public function roles() {
-     	 return $this->hasOne('App\Role');
+     	 return $this->belongsTo('App\Role');
+    }
+
+    public function is($roleType) {
+     	 foreach ($this->roles()->get() as $roles) {
+     	   dd($roles);
+     	 }
     }
 
 }

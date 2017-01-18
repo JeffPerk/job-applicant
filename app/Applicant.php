@@ -11,6 +11,6 @@ class Applicant extends Model
     }
 
     public function jobs() {
-     	 return $this->hasMany('App\Job');
+     	 return $this->hasOne('App\Job');
     }
 }
