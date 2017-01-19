@@ -31,9 +31,13 @@ class User extends Authenticatable
      	 return $this->belongsTo('App\Role');
     }
 
-    public function is($roleType) {
-     	 foreach ($this->roles()->get() as $roles) {
-     	   dd($roles);
+    public function applicant() {
+     	 return $this->belongsTo('App\Applicant');
+    }
+
+    public function isRole($roleType) {
+     	 if ($roleType === 1) {
+     	   return $this->roleType = 'Admin';
      	 }
     }
 
