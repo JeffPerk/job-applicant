@@ -7689,7 +7689,8 @@ button.close {
 }
 
 #job-button {
-  margin-right: 10px;
+  margin-right: 5px;
+  margin-bottom: 10px;
 }
 
 #skills-label {

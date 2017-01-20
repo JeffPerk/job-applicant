@@ -14,7 +14,9 @@ class AdminController extends Controller
     public function index() {
        $theme_data = [];
        $new_admin = "<li><a href='/new-admin'>New Admin</a></li>";
+       $new_job = "<li><a href='/new-job'>Create Job</a></li>";
        $theme_data['new_admin'] = $new_admin;
+       $theme_data['new_job'] = $new_job;
        $applicants = Applicant::get();
        foreach ($applicants as $applicant) {
          $applicant->load('job');
@@ -29,8 +31,12 @@ class AdminController extends Controller
     }
 
     public function create() {
+       $theme_data = [];
        $new_admin = "<li><a href='/new-admin'>New Admin</a></li>";
-     	 return view('admin.create', compact('new_admin'));
+       $new_job = "<li><a href='/new-job'>Create Job</a></li>";
+       $theme_data['new_admin'] = $new_admin;
+       $theme_data['new_job'] = $new_job;
+     	 return view('admin.create', $theme_data);
     }
 
     public function store(Request $request) {

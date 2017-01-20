@@ -13,6 +13,8 @@ class Job extends Model
     */
     protected $table = "jobs";
 
+    protected $fillable = ['name'];
+
     public function applicant() {
      	 return $this->hasMany('App\Applicant');
     }

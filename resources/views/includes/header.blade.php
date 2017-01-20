@@ -21,9 +21,10 @@
                   </a>
 
                   <ul class="dropdown-menu" role="menu">
-                    @if (!empty($new_admin))
+                    @if (!empty($new_admin) || !empty($new_job))
                       @php
                         echo $new_admin;
+                        echo $new_job
                       @endphp
                     @endif
                       <li>

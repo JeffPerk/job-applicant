@@ -32,3 +32,6 @@ Route::get('/practice', 'PracticeController@index');
 
 Route::get('/new-admin', 'AdminController@create');
 Route::post('/new-admin', 'AdminController@store');
+
+Route::get('/new-job', 'JobController@create');
+Route::post('/new-job', 'JobController@store');
