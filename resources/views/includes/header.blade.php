@@ -35,8 +35,8 @@
                   </ul>
               </li>
             @else
-              <li><a href="{{ url('/login') }}">Login</a></li>
-              <li><a href="{{ url('/register') }}">Register</a></li>
+              <li <?php echo ($_SERVER['REQUEST_URI'] === '/login') ? 'class="active"' : '';?>><a href="{{ url('/login') }}">Login</a></li>
+              <li <?php echo ($_SERVER['REQUEST_URI'] === '/register') ? 'class="active"' : '';?>><a href="{{ url('/register') }}">Register</a></li>
           @endif
         @endif
         </ul>
