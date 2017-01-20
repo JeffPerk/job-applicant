@@ -14,11 +14,25 @@
               <th>Job</th>
               <th>Name</th>
               <th>Email</th>
+              <th>Personal Website</th>
+              <th>Skills</th>
+              <th>Cover Letter</th>
             </thead>
             <tbody>
               <td>{{ $user->applicant->job->name }}</td>
               <td>{{ $user->name }}</td>
               <td>{{ $user->email }}</td>
+              <td>{{ $user->applicant->website }}</td>
+              <td>
+                <table>
+                  @foreach ($skills as $skill)
+                    <tr>
+                      <td>{{ $skill->name }}</td>
+                    </tr>
+                  @endforeach
+                </table>
+              </td>
+              <td>{{ $user->applicant->cover_letter }}</td>
             </tbody>
           </table>
         </div>

@@ -54,6 +54,21 @@
                               </div>
                           </div>
 
+                          <div class="form-group{{ $errors->has('skills') ? ' has-error' : '' }}">
+                              <label id="skills-label" for="skills" class="col-md-4 control-label">Skills</label>
+                              <small id="skills-label-message"><i>Please separate each skill with a comma!</i></small>
+
+                              <div class="col-md-6">
+                                  <textarea id="skills" type="skills" class="form-control" name="skills" value="{{ old('skills') }}"></textarea>
+
+                                  @if ($errors->has('skills'))
+                                      <span class="help-block">
+                                          <strong>{{ $errors->first('skills') }}</strong>
+                                      </span>
+                                  @endif
+                              </div>
+                          </div>
+
                           <div class="form-group">
                               <div class="col-md-6 col-md-offset-4">
                                   <button type="submit" class="btn btn-primary">
