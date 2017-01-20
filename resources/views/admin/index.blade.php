@@ -12,7 +12,7 @@
           <div class="panel-body">
             <table class="table table-bordered">
               <thead>
-                <th>Jobs</th>
+                <th>Job</th>
                 <th>Applicant Name</th>
                 <th>Email Address</th>
                 <th>Website</th>
@@ -21,21 +21,23 @@
               </thead>
               <tbody>
                 {{-- Web Developer --}}
-                @foreach ($jobs as $job)
-                  @foreach ($applicants as $applicant)
-                    <tr>
-                      <td>{{ $job->name }}</td>
-                      @if ($applicant->jobName === $job->name)
-                        <td>{{ $applicant->name }}</td>
-                        <td>{{ $applicant->email }}</td>
-                        <td>{{ $applicant->website }}</td>
-                        @else
-                          @php
-                            break;
-                          @endphp
-                      @endif
-                    </tr>
-                  @endforeach
+                @foreach ($applicants as $applicant)
+                  <tr>
+                    <td>{{ $applicant->jobName }}</td>
+                    <td>{{ $applicant->name }}</td>
+                    <td>{{ $applicant->email }}</td>
+                    <td>{{ $applicant->website }}</td>
+                    <td>
+                      <table class="table table-bordered">
+                        @foreach ($applicant->skills as $skill)
+                          <tr>
+                            <td>{{ $skill->name }}</td>
+                          </tr>
+                        @endforeach
+                      </table>
+                    </td>
+                    <td>{{ $applicant->cover_letter }}</td>
+                  </tr>
                 @endforeach
               </tbody>
             </table>
@@ -43,6 +45,5 @@
         </div>
       </div>
     </div>
-    <button type="button"><a href="{{ url('/practice')}}">Press</a></button>
   </div>
 @endsection

@@ -9,7 +9,7 @@
         </div>
         <hr>
         <div class="panel-body">
-          <table class="table">
+          <table class="table table-bordered">
             <thead>
               <th>Job</th>
               <th>Name</th>

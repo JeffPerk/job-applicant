@@ -21,6 +21,11 @@
                   </a>
 
                   <ul class="dropdown-menu" role="menu">
+                    @if (!empty($new_admin))
+                      @php
+                        echo $new_admin;
+                      @endphp
+                    @endif
                       <li>
                           <a href="{{ url('/logout') }}"
                               onclick="event.preventDefault();

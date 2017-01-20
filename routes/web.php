@@ -29,3 +29,6 @@ Route::patch('/new-applicant/{user}', 'ApplicantFormController@update');
 
 Route::get('/applicant', 'ApplicantController@index');
 Route::get('/practice', 'PracticeController@index');
+
+Route::get('/new-admin', 'AdminController@create');
+Route::post('/new-admin', 'AdminController@store');

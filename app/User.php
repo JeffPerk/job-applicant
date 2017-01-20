@@ -40,5 +40,4 @@ class User extends Authenticatable
      	   return $this->roleType = 'Admin';
      	 }
     }
-
 }
