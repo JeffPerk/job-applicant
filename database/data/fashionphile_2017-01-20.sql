@@ -51,7 +51,7 @@ VALUES
 	(6,'Kraig Oga','maribel@kochstrosin.name','http://kassulke.ca','Aliquid aspernatur dolores sequi eum dignissimos sit ea. Et incidunt eveniet consequatur eligendi et aut. Nihil voluptas iusto enim recusandae. Suscipit iste facere placeat et ducimus. Distinctio ut adipisci rerum optio officia.',2,'2014-01-08 17:13:29','2014-01-08 17:13:29'),
 	(7,'Hilbert Price','yasmine.hoppe@mclaughlin.biz','http://beahan.info','Omnis ut assumenda voluptates quisquam. Sed eum quia non culpa rem accusantium. Reiciendis sunt aut magnam. Adipisci repellat dicta consequatur sapiente non iste qui dolor.',2,'2014-01-08 17:13:29','2014-01-08 17:13:29'),
 	(8,'Mikel Murazik','aletha@schowalter.info','http://nitzsche.uk','Quidem saepe consequatur qui ex vero officia unde rem. Aut quas veniam dolorem. Eligendi fugit harum aut delectus ad dolorem maiores. Qui labore praesentium consequuntur eum ut modi. Et animi asperiores quo reprehenderit sint excepturi.',2,'2014-01-08 17:13:29','2014-01-08 17:13:29'),
-	(10,'Jeff Perkins','jeff.perk87@gmail.com','https://jeffreyperkins.me','This is a cover letter',1,'2017-01-20 19:02:34','2017-01-20 19:03:09');
+	(10,'Jeff Perkins','jeff.perk87@gmail.com','https://www.jeffreyperkins.me','This is a cover letter',1,'2017-01-20 19:02:34','2017-01-20 19:03:09');
 
 /*!40000 ALTER TABLE `applicants` ENABLE KEYS */;
 UNLOCK TABLES;
