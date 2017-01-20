@@ -9,8 +9,8 @@
               <div class="panel panel-default">
                   <h3 class="panel-heading text-center">Welcome {{ $user->name }}!<br>Please select an opening your interested in!</h3>
                   <div class="panel-body">
-                      <form class="form-horizontal" role="form" method="POST" action="">
-                          {{ csrf_field() }}
+                      <form class="form-horizontal" role="form" method="POST" action="{{ url('/new-applicant/'.$user->id)}}">
+                          {{ method_field('PATCH') }}  {{ csrf_field() }}
 
                           <div class="form-group{{ $errors->has('name') ? ' has-error' : '' }}">
                               <label for="jobs" class="col-md-4 control-label">Openings:</label>
@@ -19,10 +19,24 @@
                                 <div data-toggle="buttons">
                                   @foreach ($jobs as $job)
                                     <label id="job-button" class="btn btn-primary">
-                                      <input name="job[]" type="checkbox" autocomplete="off" checked> {{ $job->name }}
+                                      <input name="job_id" type="checkbox" autocomplete="off" value="{{ $job->id }}"> {{ $job->name }}
                                     </label>
                                   @endforeach
                                 </div>
+                              </div>
+                          </div>
+
+                          <div class="form-group{{ $errors->has('website') ? ' has-error' : '' }}">
+                              <label for="email" class="col-md-4 control-label">Personal Website</label>
+
+                              <div class="col-md-6">
+                                  <input id="website" type="text" class="form-control" name="website" value="{{ old('website') }}">
+
+                                  @if ($errors->has('website'))
+                                      <span class="help-block">
+                                          <strong>{{ $errors->first('website') }}</strong>
+                                      </span>
+                                  @endif
                               </div>
                           </div>
 

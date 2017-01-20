@@ -18,13 +18,14 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index');
-Route::get('/applicant/{id}', 'ApplicantController@show');
+Route::get('/applicant/{user}', 'ApplicantController@show');
 
 Route::group(['middleware' => ['auth', 'admin']], function() {
   Route::get('/admin', 'AdminController@index');
 });
 
-Route::get('/new-applicant/{id}/edit', 'ApplicantFormController@edit');
+Route::get('/new-applicant/{user}/edit', 'ApplicantFormController@edit');
+Route::patch('/new-applicant/{user}', 'ApplicantFormController@update');
 
 Route::get('/applicant', 'ApplicantController@index');
 Route::get('/practice', 'PracticeController@index');

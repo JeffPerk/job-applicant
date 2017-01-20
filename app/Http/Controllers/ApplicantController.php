@@ -7,8 +7,7 @@ use App\User;
 
 class ApplicantController extends Controller
 {
-    public function show($id) {
-      $user = User::find($id);
+    public function show(User $user) {
       $user->load('applicant.job');
       
       return view('applicants.show', compact('user'));
