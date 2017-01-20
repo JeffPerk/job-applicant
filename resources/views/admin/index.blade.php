@@ -26,7 +26,7 @@
                     <td>{{ $applicant->jobName }}</td>
                     <td>{{ $applicant->name }}</td>
                     <td>{{ $applicant->email }}</td>
-                    <td>{{ $applicant->website }}</td>
+                    <td><a href="{{ $applicant->website }}">{{ $applicant->website }}</a></td>
                     <td>
                       <table class="table table-bordered">
                         @foreach ($applicant->skills as $skill)
