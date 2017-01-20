@@ -3,6 +3,7 @@
 namespace App\Http\Middleware;
 
 use Closure;
+use Auth;
 
 class AdminMiddleware
 {
@@ -17,7 +18,9 @@ class AdminMiddleware
     {
         if ($request->user()->role_id === 1) {
           return $next($request);
-        } 
-        return redirect('home');
+        }
+        $user = Auth::user();
+        $user->load('applicant');
+        return redirect('/applicant/'.$user->applicant->id);
     }
 }
